@@ -19,20 +19,12 @@ char **parse_input(char *input, int *argc)
             capacity *= 2;
             char **new_tokens = realloc(tokens, sizeof(char *) * capacity);
             if (!new_tokens)
-            {
-                free(tokens);
                 return NULL;
-            }
             tokens = new_tokens;
         }
         tokens[count] = strdup(token);
         if (!tokens[count])
-        {
-            for (int j = 0; j < count; j++)
-                free(tokens[j]);
-            free(tokens);
             return NULL;
-        }
         count++;
         token = strtok(NULL, " \t\n");
     }

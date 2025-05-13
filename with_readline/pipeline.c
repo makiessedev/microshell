@@ -32,7 +32,7 @@ int run_pipeline(char **argv, char **envp, int i, int num_cmds)
     int argc = 0;
     while (cmd_index < num_cmds)
     {
-        int j = 0;
+        int j = 0; 
         while (argc + j < i && strcmp(argv[j], "|"))
             j++;
         argv[j] = 0;

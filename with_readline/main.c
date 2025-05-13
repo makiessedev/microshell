@@ -45,7 +45,6 @@ int main(int argc, char **argv, char **envp)
             continue;
         }
 
-
         int i = 0;
         while (i < token_count)
         {
